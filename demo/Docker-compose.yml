@@ -1,6 +1,6 @@
 services: 
   app:
-    image: unimpact-app:v1.0
+    image: jcbarros21/unimpact-app:v1.0
     container_name: unimpact-app
     ports:
       - "8080:8080"
