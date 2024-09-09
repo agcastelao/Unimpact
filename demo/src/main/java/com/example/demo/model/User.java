@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import com.example.demo.enum1.CargoEnum;
+
 public class User {
     
     private Long id;
@@ -9,9 +11,10 @@ public class User {
     private String phone2;
     private String cnpj;
     private String cpf;
+    private CargoEnum cargo;
 
     public User() {}
-    
+
     public Long getId() {
         return id;
     }
@@ -54,7 +57,11 @@ public class User {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-
-    
+    public CargoEnum getCargo() {
+        return cargo;
+    }
+    public void setCargo(CargoEnum cargo) {
+        this.cargo = cargo;
+    }
 
 }
