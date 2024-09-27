@@ -1,4 +1,4 @@
-/* Atualizar o botão "PROFESSOR" para ter uma animação */
+
 .hover-text {
     transition: color 0.3s ease;
 }
@@ -8,7 +8,7 @@
     font-weight: bold;
 }
 
-/* Estilos do card */
+
 .card {
     border-radius: 10px;
     border: 1px solid #e0e0e0;
@@ -16,7 +16,7 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Atualizar as labels para texto preto */
+
 label {
     font-weight: bold;
     color: black;
@@ -33,7 +33,7 @@ label {
     font-size: 1rem;
 }
 
-/* Melhorar a aparência dos inputs */
+
 input, textarea {
     border: 2px solid #a373d1;
     border-radius: 5px;
@@ -46,7 +46,7 @@ input:focus, textarea:focus {
     outline: none;
 }
 
-/* Botões padronizados */
+
 .btn-card, .btn-secondary {
     padding: 12px 20px !important;
     font-size: 1.1rem !important;
@@ -54,35 +54,33 @@ input:focus, textarea:focus {
     font-weight: bold !important;
 }
 
-/* Estilo do botão "Enviar Proposta" */
+
 .btn-card {
-    background-color: #A373D1 !important; /* Cor roxa clara */
+    background-color: #A373D1 !important; 
     color: white !important;
     border: none !important;
     transition: all 0.3s ease !important;
 }
 
 .btn-card:hover {
-    background-color: #8453B3 !important; /* Cor escura ao passar o mouse */
+    background-color: #8453B3 !important; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
-    transform: translateY(-2px) !important; /* Elevação suave */
+    transform: translateY(-2px) !important;
 }
 
-/* Estilo do botão "Limpar Campos" */
 .btn-secondary {
-    background-color: #A373D1 !important; /* Cor roxa clara */
+    background-color: #A373D1 !important; 
     color: white !important;
     border: none !important;
     transition: all 0.3s ease !important;
 }
 
 .btn-secondary:hover {
-    background-color: #8453B3 !important; /* Cor escura ao passar o mouse */
+    background-color: #8453B3 !important; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
     transform: translateY(-2px) !important;
 }
 
-/* Ajustar espaçamento entre botões */
 .btn-container {
     display: flex;
     justify-content: space-between;

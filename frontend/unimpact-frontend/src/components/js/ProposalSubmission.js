@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../css/ProposalSubmission.css'; // Atualizado o caminho do CSS
-import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
+import '../css/ProposalSubmission.css'; 
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 const ProposalSubmission = () => {
   const [proposal, setProposal] = useState({
@@ -28,13 +28,12 @@ const ProposalSubmission = () => {
     setError(false);
     setSuccess(false);
 
-    // Simulando envio para backend
     setTimeout(() => {
       setLoading(false);
       setSuccess(true);
       console.log('Proposta enviada:', proposal);
       console.log('Arquivo:', document);
-    }, 2000); // Simulando 2 segundos de processamento
+    }, 2000); 
   };
 
   const handleReset = () => {
@@ -82,7 +81,6 @@ const ProposalSubmission = () => {
           <div className="card p-4 shadow-lg" style={{ width: '40rem' }}>
             <h4 className="text-center mb-4">Submissão de Propostas</h4>
 
-            {/* Mensagens de sucesso/erro */}
             {success && <div className="alert alert-success">Proposta enviada com sucesso!</div>}
             {error && <div className="alert alert-danger">Por favor, preencha todos os campos obrigatórios.</div>}
 
