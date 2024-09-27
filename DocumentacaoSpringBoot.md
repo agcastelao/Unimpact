@@ -29,7 +29,7 @@ Após isso, baixe o projeto e importe para sua IDE.
 
 No arquivo `pom.xml`, as dependências precisam estar definidas. Isso garante que todas as bibliotecas necessárias para o desenvolvimento com banco de dados estejam disponíveis.
 
- <!-- -->
+ <!--
 <dependencies>
     <!-- Dependência para criar APIs REST -->
     <dependency>
@@ -48,8 +48,8 @@ No arquivo `pom.xml`, as dependências precisam estar definidas. Isso garante qu
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
         <scope>runtime</scope>
-    </dependency>
-</dependencies>
+    </dependency> </dependencies> -->
+
 
 
 Essas dependências garantem que você possa criar APIs RESTful, trabalhar com banco de dados via JPA e se conectar ao MySQL.
@@ -82,19 +82,17 @@ Uma entidade representa uma tabela no banco de dados. Vamos criar a classe Clien
 
 Crie um pacote chamado models e dentro dele, a classe Cliente.java:
 
-// começa ja daqui o código 
+ 
 
-package com.exemplo.clientes.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-@Entity
-  public class Cliente {
-
-    @Id
+      package com.exemplo.clientes.models; 
+      import jakarta.persistence.Entity;
+      import jakarta.persistence.GeneratedValue;
+      import jakarta.persistence.GenerationType;
+      import jakarta.persistence.Id;
+      @Entity
+      public class Cliente {
+     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
@@ -123,8 +121,7 @@ import jakarta.persistence.Id;
 
     public void setEmail(String email) {
         this.email = email;
-    }
-}
+    }}
 
 
 @Entity: Informa ao JPA que esta classe representa uma tabela no banco.
@@ -152,22 +149,18 @@ O controlador expõe os endpoints da API REST para interagir com os dados de Cli
 
 Crie um pacote chamado controllers e dentro dele, crie a classe ClienteController.java:
 
-// começa já daqui o códogo
 
-package com.exemplo.clientes.controllers;
 
-import com.exemplo.clientes.models.Cliente;
-import com.exemplo.clientes.repositories.ClienteRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-
-@RestController
-@RequestMapping("/clientes")
-public class ClienteController {
-
-    @Autowired
+        package com.exemplo.clientes.controllers; 
+        import com.exemplo.clientes.models.Cliente;
+        import com.exemplo.clientes.repositories.ClienteRepository;
+        import org.springframework.beans.factory.annotation.Autowired;
+        import org.springframework.web.bind.annotation.*;
+        import java.util.List;
+        @RestController
+        @RequestMapping("/clientes")
+        public class ClienteController {
+    @Autowired 
     private ClienteRepository clienteRepository;
 
     // Listar todos os clientes
@@ -195,8 +188,7 @@ public class ClienteController {
     @DeleteMapping("/{id}")
     public void deletarCliente(@PathVariable Long id) {
         clienteRepository.deleteById(id);
-    }
-}
+    }}
 
 
 @RestController: Define que esta classe será um controlador REST.
