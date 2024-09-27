@@ -1,1 +1,5 @@
-﻿# Unimpact
+# Unimpact
+
+## Descrição da proposta do projeto:
+---
+O usuário solicitante preencherá um formulário após o cadastro, inserindo a proposta. Assim, com a proposta desenvolvida pelo usuário solicitante, ela será encaminhada para a análise do responsável que atua na extensão. Caso seja indeferida, a proposta retornará ao usuário solicitante com as justificativas. Nesse caso, o usuário solicitante pode encerrar a proposta ou realizar as modificações solicitadas pelo responsável pela extensão. No entanto, caso seja deferida, a proposta seguirá para a análise do coordenador do curso referente à área da proposta. O processo passará pelo mesmo procedimento: se indeferida, a proposta retornará ao responsável pela extensão; se deferida, seguirá para a análise do professor, passando pelo mesmo procedimento. Caso o professor dê o aval, a proposta seguirá o fluxo inverso até o usuário solicitante. Se o usuário solicitante aceitar, a proposta se tornará um projeto. Obs.: No fluxo inverso, aplica-se a mesma lógica: se uma entidade responsável não aceitar, a proposta retornará para a entidade anterior
