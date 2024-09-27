@@ -40,7 +40,7 @@ FROM openjdk:17-jdk-alpine: Define a imagem base do Docker, que neste caso é o 
 WORKDIR /app: Define /app como o diretório de trabalho dentro do contêiner.
 COPY target/spring-boot-app.jar /app/: Copia o arquivo JAR da aplicação gerado pelo Maven para o diretório /app no contêiner.
 ENTRYPOINT: Especifica o comando que será executado quando o contêiner iniciar, que é rodar a aplicação Java.
-3. Gerar o Arquivo JAR
+### 3. Gerar o Arquivo JAR
 Antes de construir a imagem Docker, é necessário gerar o arquivo .jar da aplicação Spring Boot. Execute o seguinte comando no terminal:
 
 mvn clean package
@@ -60,7 +60,7 @@ target/
 
 Isso evita que diretórios como target e arquivos de configuração da IDE sejam incluídos na imagem Docker.
 
-###5. Construir a Imagem Docker
+### 5. Construir a Imagem Docker
 Agora que você tem o Dockerfile e o JAR da aplicação, pode construir a imagem Docker. No terminal, navegue até a pasta raiz do projeto (onde está o Dockerfile) e execute o seguinte comando:
 
 docker build -t spring-boot-app .
@@ -72,7 +72,7 @@ build: Diz ao Docker para construir uma imagem.
 -t spring-boot-app: Nomeia a imagem como spring-boot-app.
 .: Refere-se ao diretório atual, que contém o Dockerfile.
 
-###6. Rodar o Contêiner
+### 6. Rodar o Contêiner
 Com a imagem Docker criada, você pode rodar um contêiner baseado nela. Use o seguinte comando:
 
 docker run -p 8080:8080 spring-boot-app
@@ -85,14 +85,14 @@ run: Inicia um contêiner baseado na imagem especificada.
 spring-boot-app: Nome da imagem Docker que criamos anteriormente.
 Agora, sua aplicação Spring Boot está rodando dentro de um contêiner Docker, acessível em http://localhost:8080.
 
-###7. Testar a Aplicação
+### 7. Testar a Aplicação
 Com o contêiner rodando, você pode acessar os endpoints da sua aplicação Spring Boot em um navegador ou com uma ferramenta como o Postman. Por exemplo:
 http://localhost:8080/clientes
 
 
 Se sua aplicação expõe endpoints de API, como no exemplo anterior, você poderá fazer requisições HTTP diretamente.
 
-###8. Parar o Contêiner
+### 8. Parar o Contêiner
 Se você quiser parar o contêiner em execução, pode usar o comando docker stop:
 
 docker ps   # Lista os contêineres em execução
@@ -101,7 +101,7 @@ docker stop <container_id>
 
 Substitua <container_id> pelo ID do contêiner que você deseja parar (você pode obter o ID usando o comando docker ps).
 
-###9. (Opcional) Usar o Docker Compose
+### 9. (Opcional) Usar o Docker Compose
 Se a aplicação depender de serviços externos como um banco de dados, o Docker Compose facilita a orquestração de múltiplos contêineres. Aqui está um exemplo de como configurar o docker-compose.yml para rodar a aplicação Spring Boot junto com um banco de dados MySQL:
 
 Crie um arquivo docker-compose.yml na raiz do projeto:
