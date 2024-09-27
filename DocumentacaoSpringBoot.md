@@ -29,7 +29,7 @@ Após isso, baixe o projeto e importe para sua IDE.
 
 No arquivo `pom.xml`, as dependências precisam estar definidas. Isso garante que todas as bibliotecas necessárias para o desenvolvimento com banco de dados estejam disponíveis.
 
-
+ <!-- -->
 <dependencies>
     <!-- Dependência para criar APIs REST -->
     <dependency>
@@ -50,6 +50,7 @@ No arquivo `pom.xml`, as dependências precisam estar definidas. Isso garante qu
         <scope>runtime</scope>
     </dependency>
 </dependencies>
+
 
 Essas dependências garantem que você possa criar APIs RESTful, trabalhar com banco de dados via JPA e se conectar ao MySQL.
 
@@ -81,6 +82,8 @@ Uma entidade representa uma tabela no banco de dados. Vamos criar a classe Clien
 
 Crie um pacote chamado models e dentro dele, a classe Cliente.java:
 
+// começa ja daqui o código 
+
 package com.exemplo.clientes.models;
 
 import jakarta.persistence.Entity;
@@ -89,7 +92,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Cliente {
+  public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -148,6 +151,8 @@ Essa interface oferece métodos como save(), findAll(), findById(), e deleteById
 O controlador expõe os endpoints da API REST para interagir com os dados de Cliente.
 
 Crie um pacote chamado controllers e dentro dele, crie a classe ClienteController.java:
+
+// começa já daqui o códogo
 
 package com.exemplo.clientes.controllers;
 
