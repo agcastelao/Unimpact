@@ -1,4 +1,4 @@
-package com.example.demo.modelos;
+package com.example.demo.models;
 
 import java.time.LocalDate;
 
@@ -14,7 +14,7 @@ public class Analisa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     // Muitos para um (N:1) com Usuario
     @ManyToOne
@@ -30,10 +30,10 @@ public class Analisa {
 
     private String obs;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public Usuario getUsuario() {

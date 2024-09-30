@@ -1,4 +1,4 @@
-package com.example.demo.modelos;
+package com.example.demo.models;
 import jakarta.persistence.*;
 import java.util.List;
 
@@ -8,7 +8,7 @@ public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_usuario;
+    private Long id_usuario;
 
     private String cpf;
     private String nome;
@@ -23,11 +23,11 @@ public class Usuario {
     private String telefone_1;
     private String telefone_2;
 
-    public int getId_usuario() {
+    public Long getId_usuario() {
         return id_usuario;
     }
 
-    public void setId_usuario(int id_usuario) {
+    public void setId_usuario(Long id_usuario) {
         this.id_usuario = id_usuario;
     }
 

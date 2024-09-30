@@ -1,6 +1,7 @@
-package com.example.demo.modelos;
+package com.example.demo.models;
 
 import org.hibernate.type.descriptor.java.LocalDateJavaType;
+
 import java.time.LocalDate;
 
 import jakarta.persistence.Entity;

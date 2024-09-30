@@ -1,46 +1,40 @@
 package com.example.demo.models;
 
-import jakarta.persistence.*;
+import org.hibernate.mapping.List;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Proposta {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String titulo;
-    private String descricao;
-    private String solicitante;
+    private Long id_proposta;
 
-    public Long getId() { 
-        return id; 
+    private String status_proposta;
+
+    public Long getId_proposta() {
+        return id_proposta;
     }
 
-    public void setId(Long id) {
-        this.id = id; 
+    public void setId_proposta(Long id_proposta) {
+        this.id_proposta = id_proposta;
     }
 
-    public String getTitulo() { 
-        return titulo; 
+    public String getStatus_proposta() {
+        return status_proposta;
     }
 
-    public void setTitulo(String titulo) { 
-        this.titulo = titulo; 
+    public void setStatus_proposta(String status_proposta) {
+        this.status_proposta = status_proposta;
     }
 
-    public String getDescricao() { 
-        return descricao; 
-    }
+   
 
-    public void setDescricao(String descricao) { 
-        this.descricao = descricao; 
-    }
-
-    public String getSolicitante() { 
-        return solicitante; 
-    }
-
-    public void setSolicitante(String solicitante) { 
-        this.solicitante = solicitante; 
-    }
+    
 }
 
