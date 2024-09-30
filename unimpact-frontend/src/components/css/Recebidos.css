@@ -1,0 +1,127 @@
+/* Posiciona a logo no canto superior esquerdo */
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 100; 
+}
+
+/* Centralizar o texto do Administrador no centro da tela */
+.admin-text {
+    color: #8453b3;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 60px; 
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+/* Ajusta o ícone do administrador */
+.admin-text img {
+    margin-right: 10px;
+    background-color: #ddd;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+/* Centralizar o filtro e o card de propostas */
+.propostas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    margin-top: 120px; 
+    width: 100%;
+}
+
+/* Card de Propostas Recebidas */
+.card {
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 600px; 
+}
+
+/* Estilização do campo de filtro */
+.filter-bar {
+    margin-top: 20px;
+    width: 600px;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 768px) {
+    .admin-text {
+        font-size: 18px;
+    }
+
+    .card, .filter-bar {
+        width: 100%; 
+    }
+}
+
+/* Estilização da tabela */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table th {
+    background-color: #A373D1;
+    color: white;
+}
+
+/* Animação nos botões de Aprovar e Rejeitar */
+.btn-approve {
+    background-color: #28a745;
+    border-color: #28a745;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-approve:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.btn-reject {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-reject:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+/* Modal */
+.modal-backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Footer */
+#footer_unicap {
+    background-color: #690013;
+    padding: 20px 0;
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+}
+
+footer {
+    flex-shrink: 0;
+}
