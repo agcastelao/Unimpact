@@ -1,0 +1,98 @@
+
+.hover-text {
+    transition: color 0.3s ease;
+}
+
+.hover-text:hover {
+    color: #8453b3;
+    font-weight: bold;
+}
+
+
+.card {
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+label {
+    font-weight: bold;
+    color: black;
+    font-size: 1.1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+
+input, textarea {
+    border: 2px solid #a373d1;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    border-color: #8453b3;
+    box-shadow: 0 0 10px rgba(131, 75, 179, 0.3);
+    outline: none;
+}
+
+
+.btn-card, .btn-secondary {
+    padding: 12px 20px !important;
+    font-size: 1.1rem !important;
+    border-radius: 8px !important;
+    font-weight: bold !important;
+}
+
+
+.btn-card {
+    background-color: #A373D1 !important; 
+    color: white !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-card:hover {
+    background-color: #8453B3 !important; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-2px) !important;
+}
+
+.btn-secondary {
+    background-color: #A373D1 !important; 
+    color: white !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-secondary:hover {
+    background-color: #8453B3 !important; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-2px) !important;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#footer_unicap {
+    background-color: #690013;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer {
+    flex-shrink: 0;
+}
