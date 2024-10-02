@@ -1,5 +1,6 @@
 package com.example.demo.models;
 
+import java.io.Serializable;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -12,7 +13,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "proposta")
-public class Proposta {
+public class Proposta implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,9 +27,6 @@ public class Proposta {
     
     private String status_proposta;
     
-    
-
-
     public Projeto getProjeto() {
         return projeto;
     }
@@ -61,8 +59,5 @@ public class Proposta {
         this.status_proposta = status_proposta;
     }
 
-   
-
-    
 }
 

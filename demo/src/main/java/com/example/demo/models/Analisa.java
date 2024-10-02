@@ -1,5 +1,6 @@
 package com.example.demo.models;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
@@ -12,7 +13,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "contraproposta_analisa")
-public class Analisa {
+public class Analisa implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,30 +36,39 @@ public class Analisa {
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
+
     public Usuario getUsuario() {
         return usuario;
     }
+
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+
     public Proposta getProposta() {
         return proposta;
     }
+
     public void setProposta(Proposta proposta) {
         this.proposta = proposta;
     }
+
     public LocalDate getDataAnalise() {
         return dataAnalise;
     }
+    
     public void setDataAnalise(LocalDate dataAnalise) {
         this.dataAnalise = dataAnalise;
     }
+
     public String getObs() {
         return obs;
     }
+
     public void setObs(String obs) {
         this.obs = obs;
     }

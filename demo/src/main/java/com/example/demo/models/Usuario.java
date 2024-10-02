@@ -1,12 +1,14 @@
 package com.example.demo.models;
 import jakarta.persistence.*;
+
+import java.io.Serializable;
 import java.util.List;
 
 import com.example.demo.enum1.CargoEnum;
 
 @Entity
 @Table(name = "usuario")
-public class Usuario {
+public class Usuario implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,7 +37,6 @@ public class Usuario {
     @Enumerated(EnumType.STRING)
     private CargoEnum cargo;
     
-
     public Endereco getEndereco() {
         return endereco;
     }
