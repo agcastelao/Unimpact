@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.demo.models.Analisa;
 
-public interface AnalisaRepository extends JpaRepository<Analisa, Integer> {
+public interface AnalisaRepository extends JpaRepository<Analisa, Long> {
     
 }
 

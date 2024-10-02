@@ -1,7 +1,5 @@
 package com.example.demo.models;
 
-import org.hibernate.type.descriptor.java.LocalDateJavaType;
-
 import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
@@ -10,8 +8,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "projeto")
 public class Projeto {
 
     @Id

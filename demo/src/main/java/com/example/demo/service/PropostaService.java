@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.models.Proposta;
-import com.example.demo.repository.PropostaRepository;
+import com.example.demo.repositories.PropostaRepository;
 
 @Service
 public class PropostaService {
