@@ -27,6 +27,9 @@ public class Usuario implements Serializable {
     @JoinColumn(name = "id_endereco")
     private Endereco endereco;
 
+    @ManyToMany(mappedBy = "usuarios")
+    private List<Curso> cursos;
+
     private String cpf;
     private String nome;
     private String senha;
@@ -116,6 +119,16 @@ public class Usuario implements Serializable {
     public void setPropostas(List<Proposta> propostas) {
         this.propostas = propostas;
     }
+
+    public List<Curso> getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(List<Curso> cursos) {
+        this.cursos = cursos;
+    }
+
+    
 }
 
 
