@@ -1,5 +1,5 @@
 package com.example.demo.service.DataProvider.IDataProvider;
 
-public interface IPropostaoDataProvider {
+public interface IPropostaDataProvider {
 
 }
