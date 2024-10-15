@@ -1,5 +1,7 @@
 package com.example.demo.service.BusinessObject;
 
-public class CursoBusinessObject {
+import com.example.demo.service.BusinessObject.IBusinessObject.ICursoBusinessObject;
+
+public class CursoBusinessObject implements ICursoBusinessObject {
     
 }

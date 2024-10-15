@@ -1,5 +1,7 @@
 package com.example.demo.service.BusinessObject;
 
-public class UsuarioBusinessObject {
+import com.example.demo.service.BusinessObject.IBusinessObject.IUsuarioBusinessObject;
+
+public class UsuarioBusinessObject implements IUsuarioBusinessObject{
     
 }

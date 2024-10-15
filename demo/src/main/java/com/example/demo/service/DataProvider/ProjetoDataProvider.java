@@ -1,5 +1,7 @@
 package com.example.demo.service.DataProvider;
 
-public class ProjetoDataProvider {
-    
+import com.example.demo.service.DataProvider.IDataProvider.IProjetoDataProvider;
+
+public class ProjetoDataProvider implements IProjetoDataProvider{
+
 }
