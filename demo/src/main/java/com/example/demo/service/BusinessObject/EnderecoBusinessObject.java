@@ -1,5 +1,7 @@
 package com.example.demo.service.BusinessObject;
 
-public class EnderecoBusinessObject {
+import com.example.demo.service.BusinessObject.IBusinessObject.IEnderecoBusinessObject;
+
+public class EnderecoBusinessObject implements IEnderecoBusinessObject{
     
 }
