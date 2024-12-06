@@ -31,3 +31,26 @@ volumes:
   postgres-data:
 
 
+#Security
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/nome_do_banco
+      SPRING_DATASOURCE_USERNAME: seu_usuario
+      SPRING_DATASOURCE_PASSWORD: sua_senha
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: nome_do_banco
+      MYSQL_USER: seu_usuario
+      MYSQL_PASSWORD: sua_senha
+      MYSQL_ROOT_PASSWORD: root_senha
+    ports:
+      - "3306:3306"
+

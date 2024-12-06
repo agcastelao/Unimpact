@@ -15,3 +15,9 @@ EXPOSE 8080
 
 # Comando para rodar a aplicação Spring Boot
 ENTRYPOINT ["mvn", "spring-boot:run"]
+
+# Comando para rodar a aplicação SpringSecurity
+FROM openjdk:17-jdk-slim
+VOLUME /tmp
+COPY target/seu-aplicativo.jar app.jar
+ENTRYPOINT ["java", "-jar", "/app.jar"]
